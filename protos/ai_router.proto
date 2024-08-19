@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ai_router;
+
+service AIRouter {
+  rpc RouteRequest (AIRequest) returns (AIResponse) {}
+  rpc StreamingRouteRequest (AIRequest) returns (stream AIResponse) {}
+}
+
+message AIRequest {
+  string provider = 1;
+  string model = 2;
+  string prompt = 3;
+  map<string, string> parameters = 4;
+}
+
+message AIResponse {
+  string content = 1;
+  string provider = 2;
+  string model = 3;
+}

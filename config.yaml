@@ -1,0 +1,9 @@
+providers:
+  openai:
+    default_model: "gpt-4o-mini"
+  anthropic:
+    default_model: "claude-3-5-sonnet-20240620"
+
+server:
+  grpc_port: 50051
+  http_port: 8080
