@@ -11,8 +11,8 @@ Beaker==1.12.1
 beautifulsoup4==4.12.3
 blivet==3.10.0
 blivet-gui==2.5.0
-boto3==1.34.157
-botocore==1.34.157
+boto3==1.34.162
+botocore==1.34.162
 Brlapi==0.8.5
 Brotli==1.1.0
 certifi==2023.5.7
@@ -27,7 +27,7 @@ dbus-python==1.3.2
 defusedxml==0.7.1
 distlib==0.3.8
 distro==1.9.0
-dnf==4.21.0
+dnf==4.21.1
 fedora-third-party==0.10
 file-magic==0.4.0
 filelock==3.13.4
@@ -56,7 +56,7 @@ jmespath==1.0.1
 keyring==24.3.1
 langtable==0.0.68
 libcomps==0.1.20
-libdnf==0.73.2
+libdnf==0.73.3
 load-dotenv==0.1.0
 louis==3.28.0
 lxml==5.1.0
@@ -65,6 +65,7 @@ MarkupSafe==2.1.3
 meson==1.4.1
 more-itertools==10.1.0
 multidict==6.0.5
+mypy-protobuf==3.6.0
 netifaces==0.11.0
 nftables==0.1
 numexpr==2.8.5
@@ -85,14 +86,14 @@ protobuf==5.27.3
 proton-core==0.2.0
 proton-keyring-linux==0.0.2
 proton-keyring-linux-secretservice==0.0.2
-proton-vpn-api-core==0.30.0
-proton-vpn-gtk-app==4.4.3
-proton-vpn-killswitch-network-manager==0.5.0
-proton-vpn-killswitch-network-manager-wireguard==0.1.0
+proton-vpn-api-core==0.32.2
+proton-vpn-gtk-app==4.4.4
+proton-vpn-killswitch-network-manager==0.5.4
+proton-vpn-killswitch-network-manager-wireguard==0.1.4
 proton-vpn-logger==0.2.1
 proton-vpn-network-manager==0.5.2
 proton-vpn-network-manager-openvpn==0.1.0
-proton-vpn-network-manager-wireguard==0.1.0
+proton-vpn-network-manager-wireguard==0.4.1
 psutil==5.9.8
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
@@ -135,9 +136,9 @@ rockstar==0.6
 rpm==4.19.1.1
 s3transfer==0.10.2
 SecretStorage==3.3.3
-selinux @ file:///builddir/build/BUILD/libselinux-3.6/src
+selinux
 sentry-sdk==2.11.0
-sepolicy @ file:///builddir/build/BUILD/selinux-3.6/python/sepolicy
+sepolicy
 setools==4.5.1
 setuptools==69.5.1
 shtab==1.6.1
@@ -152,6 +153,7 @@ systemd-python==235
 Tempita==0.5.2
 tokenizers==0.20.0
 tqdm==4.66.5
+types-protobuf==5.27.0.20240626
 typing_extensions==4.12.2
 urllib3==1.26.19
 virtualenv==20.26.0
