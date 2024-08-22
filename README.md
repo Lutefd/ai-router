@@ -49,7 +49,7 @@ ai-router/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/ai-router.git
+   git clone https://github.com/lutefd/ai-router.git
    cd ai-router
    ```
 
