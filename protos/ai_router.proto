@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package ai_router;
 
+
 service AIRouter {
   rpc RouteRequest (AIRequest) returns (AIResponse) {}
   rpc StreamingRouteRequest (AIRequest) returns (stream AIResponse) {}
@@ -11,7 +12,8 @@ message AIRequest {
   string provider = 1;
   string model = 2;
   string prompt = 3;
-  map<string, string> parameters = 4;
+  int32 max_tokens = 4;
+  map<string, string> parameters = 5;
 }
 
 message AIResponse {

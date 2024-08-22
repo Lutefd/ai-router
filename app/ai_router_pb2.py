@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0f\x61i_router.proto\x12\tai_router\"\xa9\x01\n\tAIRequest\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\r\n\x05model\x18\x02 \x01(\t\x12\x0e\n\x06prompt\x18\x03 \x01(\t\x12\x38\n\nparameters\x18\x04 \x03(\x0b\x32$.ai_router.AIRequest.ParametersEntry\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\">\n\nAIResponse\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x10\n\x08provider\x18\x02 \x01(\t\x12\r\n\x05model\x18\x03 \x01(\t2\x93\x01\n\x08\x41IRouter\x12=\n\x0cRouteRequest\x12\x14.ai_router.AIRequest\x1a\x15.ai_router.AIResponse\"\x00\x12H\n\x15StreamingRouteRequest\x12\x14.ai_router.AIRequest\x1a\x15.ai_router.AIResponse\"\x00\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0f\x61i_router.proto\x12\tai_router\"\xbd\x01\n\tAIRequest\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\r\n\x05model\x18\x02 \x01(\t\x12\x0e\n\x06prompt\x18\x03 \x01(\t\x12\x12\n\nmax_tokens\x18\x04 \x01(\x05\x12\x38\n\nparameters\x18\x05 \x03(\x0b\x32$.ai_router.AIRequest.ParametersEntry\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\">\n\nAIResponse\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x10\n\x08provider\x18\x02 \x01(\t\x12\r\n\x05model\x18\x03 \x01(\t2\x93\x01\n\x08\x41IRouter\x12=\n\x0cRouteRequest\x12\x14.ai_router.AIRequest\x1a\x15.ai_router.AIResponse\"\x00\x12H\n\x15StreamingRouteRequest\x12\x14.ai_router.AIRequest\x1a\x15.ai_router.AIResponse\"\x00\x30\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -24,11 +24,11 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_AIREQUEST_PARAMETERSENTRY']._loaded_options = None
   _globals['_AIREQUEST_PARAMETERSENTRY']._serialized_options = b'8\001'
   _globals['_AIREQUEST']._serialized_start=31
-  _globals['_AIREQUEST']._serialized_end=200
-  _globals['_AIREQUEST_PARAMETERSENTRY']._serialized_start=151
-  _globals['_AIREQUEST_PARAMETERSENTRY']._serialized_end=200
-  _globals['_AIRESPONSE']._serialized_start=202
-  _globals['_AIRESPONSE']._serialized_end=264
-  _globals['_AIROUTER']._serialized_start=267
-  _globals['_AIROUTER']._serialized_end=414
+  _globals['_AIREQUEST']._serialized_end=220
+  _globals['_AIREQUEST_PARAMETERSENTRY']._serialized_start=171
+  _globals['_AIREQUEST_PARAMETERSENTRY']._serialized_end=220
+  _globals['_AIRESPONSE']._serialized_start=222
+  _globals['_AIRESPONSE']._serialized_end=284
+  _globals['_AIROUTER']._serialized_start=287
+  _globals['_AIROUTER']._serialized_end=434
 # @@protoc_insertion_point(module_scope)

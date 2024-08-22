@@ -35,10 +35,12 @@ class AIRequest(google.protobuf.message.Message):
     PROVIDER_FIELD_NUMBER: builtins.int
     MODEL_FIELD_NUMBER: builtins.int
     PROMPT_FIELD_NUMBER: builtins.int
+    MAX_TOKENS_FIELD_NUMBER: builtins.int
     PARAMETERS_FIELD_NUMBER: builtins.int
     provider: builtins.str
     model: builtins.str
     prompt: builtins.str
+    max_tokens: builtins.int
     @property
     def parameters(self) -> google.protobuf.internal.containers.ScalarMap[builtins.str, builtins.str]: ...
     def __init__(
@@ -47,9 +49,10 @@ class AIRequest(google.protobuf.message.Message):
         provider: builtins.str = ...,
         model: builtins.str = ...,
         prompt: builtins.str = ...,
+        max_tokens: builtins.int = ...,
         parameters: collections.abc.Mapping[builtins.str, builtins.str] | None = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing.Literal["model", b"model", "parameters", b"parameters", "prompt", b"prompt", "provider", b"provider"]) -> None: ...
+    def ClearField(self, field_name: typing.Literal["max_tokens", b"max_tokens", "model", b"model", "parameters", b"parameters", "prompt", b"prompt", "provider", b"provider"]) -> None: ...
 
 global___AIRequest = AIRequest
 
