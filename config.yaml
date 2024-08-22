@@ -1,8 +1,10 @@
 providers:
   openai:
     default_model: "gpt-4o-mini"
+    default_max_tokens: 1000
   anthropic:
     default_model: "claude-3-haiku-20240307"
+    default_max_tokens: 1000
 
 server:
   grpc_port: 50051
