@@ -1,5 +1,5 @@
 graph TD
-    A[Client Applications] -->|HTTP/gRPC| B[Load Balancer]
+    A[Client Applications] -->|HTTP/gRPC| B[Nginx Load Balancer]
     B --> C[AI Router Service]
     C -->|Repository Pattern| D[AI Provider Repository]
     D -->|Strategy Pattern| E[OpenAI Strategy]
@@ -7,4 +7,6 @@ graph TD
     E --> G[OpenAI API]
     F --> H[Anthropic API]
     C --> I[Configuration Service]
-    I --> J[(Config Store)]
+    I -->|Reads| J[config.yaml]
+    K[Docker Compose] -->|Manages| B
+    K -->|Manages| C
