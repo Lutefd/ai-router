@@ -89,10 +89,11 @@ ai-router/
      grpc_port: 50051
      http_port: 8080
    ```
-5. Set up environment variables:
-   Copyexport OPENAI_API_KEY=your_openai_api_key
-   export ANTHROPIC_API_KEY=your_anthropic_api_key
-
+5. Set up environment variables in your `.env` file:
+```
+   OPENAI_API_KEY=your_openai_api_key
+   ANTHROPIC_API_KEY=your_anthropic_api_key
+```
 
 6. Run the service:
    ```
@@ -218,7 +219,7 @@ service AIRouter {
 
 ### HTTP
 
-The HTTP gateway provides RESTful endpoints for the same functionality as the gRPC service. Refer to the API documentation for detailed usage.
+The HTTP gateway provides RESTful endpoints for the same functionality as the gRPC service. Refer to the API documentation on `/reference` for detailed usage.
 
 ## Extending the Service
 
