@@ -43,6 +43,8 @@ ai-router/
 │   └── architecture/
 │       ├── architecture.png
 │       └── architecture.mmd
+│   └── swagger/
+│       └── swagger.yaml
 ├── protos/
 │   └── ai_router.proto
 ├── .gitignore
