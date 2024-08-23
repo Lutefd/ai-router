@@ -1,0 +1,113 @@
+openapi: 3.0.0
+info:
+  title: AI Router API
+  description: API for routing AI requests to multiple providers
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:80
+    description: Local development server
+
+paths:
+  /generate:
+    post:
+      summary: Generate AI response
+      description: Route a request to generate an AI response from a specified provider
+      operationId: generateResponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AIRequest"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AIResponse"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /stream:
+    post:
+      summary: Stream AI response
+      description: Route a request to stream an AI response from a specified provider
+      operationId: streamResponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AIRequest"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            text/event-stream:
+              schema:
+                type: string
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    AIRequest:
+      type: object
+      required:
+        - provider
+        - prompt
+      properties:
+        provider:
+          type: string
+          description: The AI provider to use (e.g., 'openai' or 'anthropic')
+        model:
+          type: string
+          description: The specific model to use (optional, falls back to default if not specified)
+        prompt:
+          type: string
+          description: The input prompt for the AI
+        max_tokens:
+          type: integer
+          description: The maximum number of tokens to generate (optional)
+
+    AIResponse:
+      type: object
+      properties:
+        content:
+          type: string
+          description: The generated AI response
+        provider:
+          type: string
+          description: The AI provider used
+        model:
+          type: string
+          description: The specific model used
+
+    ErrorResponse:
+      type: object
+      properties:
+        detail:
+          type: string
+          description: Error message
